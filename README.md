@@ -20,7 +20,9 @@ python run_experiments.py
 
 `requirements.txt` 给出最低依赖版本；`requirements-reproduction.txt` 记录此次运行使用的精确版本，适合 Python 3.12 环境。运行会覆盖 `results/` 和 `figures/` 中的生成文件。主实验没有随机抽样；测试中的随机检查使用固定种子。
 
-项目包含中文字体及其许可证，不需要另外安装字体即可生成中文PNG。SVG保留文字对象，查看时可能需要安装 `assets/fonts/` 中的字体。不同软件环境下，图片排版和环境记录可以略有差异，数值结果应一致。
+第一次生成图表时，程序会从Noto官方项目下载约16MB的中文字体，校验SHA-256后缓存在 `assets/fonts/`，需要网络连接；之后可离线生成。字体许可证随项目提供。无法联网时，可提前把 `NotoSansCJKsc-Regular.otf` 放入该目录；程序会同样校验其版本。SVG保留文字对象，查看时可能需要安装该字体。不同软件环境下，图片排版和环境记录可以略有差异，数值结果应一致。
+
+字体来源：[Noto Sans CJK SC](https://github.com/notofonts/noto-cjk/tree/main/Sans/OTF/SimplifiedChinese)，校验值为 `2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b`。
 
 ## 设定和单位
 

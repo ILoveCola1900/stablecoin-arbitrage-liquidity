@@ -3,6 +3,8 @@ from pathlib import Path
 import json
 import platform
 import sys
+import hashlib
+import urllib.request
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -21,6 +23,28 @@ CN={'uniform':'均匀卖出','spaced_blocks':'分散大单','clustered_blocks':'
 DELAYS=[1,2,3,5]
 BUDGETS=[.98,1.96,2.94]
 COLORS={'uniform':'#276C86','spaced_blocks':'#CA9444','clustered_blocks':'#AA4C61'}
+
+
+def ensure_chinese_font():
+    """Cache the official OFL font and verify its exact bytes before use."""
+    font_path=ROOT/'assets/fonts/NotoSansCJKsc-Regular.otf'
+    expected='2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b'
+    if not font_path.exists():
+        url=('https://raw.githubusercontent.com/notofonts/noto-cjk/'
+             'main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf')
+        try:
+            with urllib.request.urlopen(url,timeout=60) as response:
+                data=response.read()
+        except OSError as exc:
+            raise RuntimeError('Chinese font download failed. Copy NotoSansCJKsc-Regular.otf '
+                               'to assets/fonts/ and retry. See README.md.') from exc
+        if hashlib.sha256(data).hexdigest()!=expected:
+            raise RuntimeError('Downloaded font checksum does not match the tested version.')
+        font_path.parent.mkdir(parents=True,exist_ok=True)
+        font_path.write_bytes(data)
+    if hashlib.sha256(font_path.read_bytes()).hexdigest()!=expected:
+        raise RuntimeError('Cached font checksum does not match the tested version.')
+    return font_path
 
 
 def save_figure(fig,name):
@@ -70,7 +94,7 @@ def generate():
          'price':.98,'redemption_value':1.,'randomness_in_main_experiment':False}
     (OUT/'run_config.json').write_text(json.dumps(env,indent=2,ensure_ascii=False),encoding='utf-8')
     from matplotlib import font_manager
-    font_path=ROOT/'assets/fonts/NotoSansCJKsc-Regular.otf'
+    font_path=ensure_chinese_font()
     font_manager.fontManager.addfont(str(font_path))
     font_name=font_manager.FontProperties(fname=str(font_path)).get_name()
     plt.rcParams.update({'font.family':font_name,'font.size':11,'axes.spines.top':False,

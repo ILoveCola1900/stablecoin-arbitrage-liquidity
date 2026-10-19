@@ -1,4 +1,4 @@
-path,delay_days,initial_cash_usd_million,peak_backlog_million_baseline,average_wait_days_baseline,last_purchase_day_baseline,peak_backlog_million_reinvest,average_wait_days_reinvest,last_purchase_day_reinvest,peak_backlog_million_change,average_wait_days_change,last_purchase_day_change
+﻿path,delay_days,initial_cash_usd_million,peak_backlog_million_baseline,average_wait_days_baseline,last_purchase_day_baseline,peak_backlog_million_reinvest,average_wait_days_reinvest,last_purchase_day_reinvest,peak_backlog_million_change,average_wait_days_change,last_purchase_day_change
 uniform,1,0.98,0.0,0.0,6,0.0,0.0,6,0.0,0.0,0
 uniform,1,1.96,0.0,0.0,6,0.0,0.0,6,0.0,0.0,0
 uniform,1,2.94,0.0,0.0,6,0.0,0.0,6,0.0,0.0,0

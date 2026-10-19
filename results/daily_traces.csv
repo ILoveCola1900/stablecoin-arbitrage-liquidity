@@ -1,4 +1,4 @@
-scenario_id,path,day,arrival_million,matured_tokens_million,purchased_million,cumulative_purchased_million,backlog_million,cash_usd_million,locked_principal_usd_million,realized_profit_usd_million,withdrawn_profit_usd_million
+﻿scenario_id,path,day,arrival_million,matured_tokens_million,purchased_million,cumulative_purchased_million,backlog_million,cash_usd_million,locked_principal_usd_million,realized_profit_usd_million,withdrawn_profit_usd_million
 uniform_T1_B0.98_R0,uniform,1,1.0,0.0,1.0,1.0,0.0,0.0,0.98,0.0,0.0
 uniform_T1_B0.98_R0,uniform,2,1.0,1.0,1.0,2.0,0.0,0.0,0.98,0.020000000000000018,0.020000000000000018
 uniform_T1_B0.98_R0,uniform,3,1.0,1.0,1.0,3.0,0.0,0.0,0.98,0.040000000000000036,0.040000000000000036

@@ -1,4 +1,4 @@
-path,delay_days,initial_cash_usd_million,reinvest_profit,price_usd_per_token,total_sales_million,peak_backlog_million,average_wait_days,backlog_day6_million,purchased_by_day6_million,last_arrival_day,last_purchase_day,last_settlement_day,cleanup_days_after_last_arrival,peak_locked_principal_usd_million,baseline_exact_threshold_usd_million,average_flow_proxy_usd_million,final_cash_usd_million,final_withdrawn_profit_usd_million
+﻿path,delay_days,initial_cash_usd_million,reinvest_profit,price_usd_per_token,total_sales_million,peak_backlog_million,average_wait_days,backlog_day6_million,purchased_by_day6_million,last_arrival_day,last_purchase_day,last_settlement_day,cleanup_days_after_last_arrival,peak_locked_principal_usd_million,baseline_exact_threshold_usd_million,average_flow_proxy_usd_million,final_cash_usd_million,final_withdrawn_profit_usd_million
 uniform,3,2.94,False,0.98,6,0.0,0.0,0,6.0,6,6,9,0,2.94,2.94,2.94,2.94,0.1200000000000001
 spaced_blocks,3,2.94,False,0.98,6,0.0,0.0,0,6.0,4,4,7,0,2.94,2.94,2.94,2.94,0.1200000000000001
 clustered_blocks,3,2.94,False,0.98,6,3.0,1.0,0,6.0,4,6,9,2,2.94,5.88,2.94,2.94,0.1200000000000001

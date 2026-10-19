@@ -1,4 +1,4 @@
-scenario_id,path,arrival_day,purchase_day,quantity_million,wait_days
+﻿scenario_id,path,arrival_day,purchase_day,quantity_million,wait_days
 uniform_T1_B0.98_R0,uniform,1,1,1.0,0
 uniform_T1_B0.98_R0,uniform,2,2,1.0,0
 uniform_T1_B0.98_R0,uniform,3,3,1.0,0
