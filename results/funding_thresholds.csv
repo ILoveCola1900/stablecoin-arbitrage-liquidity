@@ -1,0 +1,13 @@
+path,delay_days,exact_principal_threshold_usd_million,average_flow_proxy_usd_million
+uniform,1,0.98,0.98
+uniform,2,1.96,1.96
+uniform,3,2.94,2.94
+uniform,5,4.9,4.9
+spaced_blocks,1,2.94,0.98
+spaced_blocks,2,2.94,1.96
+spaced_blocks,3,2.94,2.94
+spaced_blocks,5,5.88,4.9
+clustered_blocks,1,2.94,0.98
+clustered_blocks,2,5.88,1.96
+clustered_blocks,3,5.88,2.94
+clustered_blocks,5,5.88,4.9
